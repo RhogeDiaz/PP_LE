@@ -5,20 +5,23 @@
 package com.mycompany.le_project;
 
 import java.util.Scanner;
-/**
+/**a
  *
  * @author rvadi
  */
 public class main{
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-       
-        Scanner input = new Scanner(System.in);
+        Decision d = new Decision();
+        Scanner sc = new Scanner(System.in);
         
-        System.out.print("Choose one: ");
-        String choice = input.nextLine();
-        
-        System.out.println("You chosen " + choice);
+        System.out.print("Welcome to our Curse(!) Artifact Store! \n\nWoud you like to purchase something?(yes/NO) ");
+        String firstC = sc.next();
+
+        if(firstC.equalsIgnoreCase("yes")){
+            d.choose();
+        }else{
+            System.out.println("Wrong input mate *turns off*");
+        }
     }
 }
